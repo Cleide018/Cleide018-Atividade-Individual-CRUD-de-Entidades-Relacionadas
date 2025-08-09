@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 0 20px;
+    color: #333;
+}
+
+header {
+    background-color: #004d99;
+    padding: 15px 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+header .logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main h1 {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+}
+
+ul li {
+    background: white;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease;
+}
+
+ul li:hover {
+    background-color: #e6f0ff;
+}
+
+ul li a {
+    margin-left: 10px;
+    color: #004d99;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+button, input[type="submit"] {
+    background-color: #004d99;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #003366;
+}
+
+a {
+    color: #004d99;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilos para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #004d99;
+    color: white;
+}
+
+thead th {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid #003366;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #e6f0ff;
+}
+
+tbody td {
+    padding: 12px 15px;
+}
+
+table a {
+    color: #004d99;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
