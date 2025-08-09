@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Biblioteca Cleides Mary</h1>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index_livros') }}">Livros</a></li>
+                <li><a href="{{ url_for('index_autores') }}">Autores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; {{ current_year }} Biblioteca - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
