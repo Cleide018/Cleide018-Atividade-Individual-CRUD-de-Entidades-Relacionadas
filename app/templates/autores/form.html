@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>{% if autor %}Editar Autor{% else %}Novo Autor{% endif %}</h1>
+<form method="post">
+    Nome: <input type="text" name="nome" value="{{ autor.get_nome() if autor else '' }}"><br>
+    Nacionalidade: <input type="text" name="nacionalidade" value="{{ autor.get_nacionalidade() if autor else '' }}"><br>
+    <button type="submit">Salvar</button>
+</form>
+{% endblock %}

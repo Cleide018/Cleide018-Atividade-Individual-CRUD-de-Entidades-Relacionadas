@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Lista de Livros</h1>
+<a href="/livros/novo">Novo Livro</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Gênero</th>
+            <th>Dono</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for livro in livros %}
+            <tr>
+                <td>{{ livro.get_titulo() }}</td>
+                <td>{{ livro.get_genero() }}</td>
+                <td>{{ livro.autor_nome }}</td>
+                <td>
+                    <a href="/livros/editar/{{ livro.get_id() }}">Editar</a>
+                    <a href="/livros/excluir/{{ livro.get_id() }}">Excluir</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

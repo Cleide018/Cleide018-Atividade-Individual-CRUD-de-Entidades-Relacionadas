@@ -1,13 +1,18 @@
 from flask import render_template, request, redirect, url_for
 from app import app
+
 from app.services.autores_services import AutorService
+
 from app.services.livros_services import LivroService
 from app.models.autor import AutorModel
 from app.models.livro import LivroModel
+from datetime import datetime
 from flask import render_template
+
 
 autor_service = AutorService()
 livro_service = LivroService()
+
 
 @app.route('/')
 def home():
@@ -42,6 +47,7 @@ def editar_autor(id):
 def excluir_autor(id):
     autor_service.remover(id)
     return redirect(url_for('index_autores'))
+
 
 @app.route('/livros')
 def index_livros():
@@ -103,7 +109,12 @@ def editar_livro(id):
 
     return render_template('livros/form.html', livro=livro, autores=autor_service.listar())
 
+
 @app.route('/livros/excluir/<int:id>')
 def excluir_livro(id):
     livro_service.remover(id)
     return redirect(url_for('index_livros'))
+
+@app.context_processor
+def inject_current_year():
+    return {'current_year': datetime.now().year}

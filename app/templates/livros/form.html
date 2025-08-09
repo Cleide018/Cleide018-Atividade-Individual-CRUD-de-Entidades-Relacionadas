@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>{% if livro %}Editar Livro{% else %}Novo Livro{% endif %}</h1>
+<form method="post">
+    Título: <input type="text" name="titulo" value="{{ livro.get_titulo() if livro else '' }}"><br>
+    Gênero: <input type="text" name="genero" value="{{ livro.get_genero() if livro else '' }}"><br>
+    Ano: <input type="number" name="ano" value="{{ livro.get_ano() if livro else '' }}"><br>
+    Autor:
+    <select name="autor_id">
+        {% for autor in autores %}
+            <option value="{{ autor.get_id() }}" {% if livro and autor.get_id() == livro.get_autor_id() %}selected{% endif %}>
+                {{ autor.get_nome() }}
+            </option>
+        {% endfor %}
+    </select><br>
+    <button type="submit">Salvar</button>
+</form>
+
+{% endblock %}
