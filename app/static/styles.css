@@ -6,15 +6,14 @@ body {
     color: #333;
 }
 
-header {
-    background-color: #004d99;
+header {background:#4b0066;
     padding: 15px 20px;
-    color: white;
+    color: rgb(255, 255, 255);
     margin-bottom: 20px;
 }
 
 header .logo a {
-    color: white;
+    color: white; 
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
@@ -58,12 +57,12 @@ ul li {
 }
 
 ul li:hover {
-    background-color: #e6f0ff;
+    background-color: #f0e6ff; 
 }
 
 ul li a {
     margin-left: 10px;
-    color: #004d99;
+    color: #8000b3; 
     text-decoration: none;
     font-weight: 600;
 }
@@ -73,7 +72,7 @@ ul li a:hover {
 }
 
 button, input[type="submit"] {
-    background-color: #004d99;
+    background-color: #8000b3; 
     color: white;
     border: none;
     padding: 8px 15px;
@@ -83,11 +82,11 @@ button, input[type="submit"] {
 }
 
 button:hover, input[type="submit"]:hover {
-    background-color: #003366;
+    background-color: #5d036f;
 }
 
 a {
-    color: #004d99;
+    color: #8000b3; 
     text-decoration: none;
 }
 
@@ -122,14 +121,14 @@ table {
 }
 
 thead {
-    background-color: #004d99;
+    background-color: #8000b3; 
     color: white;
 }
 
 thead th {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 2px solid #003366;
+    border-bottom: 2px solid #4b0066; 
 }
 
 tbody tr {
@@ -138,7 +137,7 @@ tbody tr {
 }
 
 tbody tr:hover {
-    background-color: #e6f0ff;
+    background-color: #f0e6ff; 
 }
 
 tbody td {
@@ -146,7 +145,7 @@ tbody td {
 }
 
 table a {
-    color: #004d99;
+    color: #8e40ad;
     text-decoration: none;
     margin-right: 10px;
     font-weight: 600;
